@@ -1,3 +1,13 @@
+### Vision
+
+I developed a website aimed at educating individuals about the historical context of the Palestine issue, providing valuable insights and understanding on the topic.
+
+[![Stand With Palestine](https://raw.githubusercontent.com/22mahmoud/StandWithPalestine/main/public/StandWithPalestine.svg)]
+
+
+---- 
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
