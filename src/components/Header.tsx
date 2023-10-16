@@ -1,8 +1,12 @@
-import { Flex } from "@chakra-ui/react";
-import Link from "next/link";
+import { Button, Flex, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { BiHome, BiSolidVideos, BiNews } from "react-icons/bi";
+import IconLink from "./design/IconLink";
+import Image from "next/image";
+import { MoonIcon } from "@chakra-ui/icons";
+import ThemeToggler from "./design/ThemeToggler";
+import Link from "next/link";
 
 interface HeaderLink 
 {
@@ -33,29 +37,46 @@ export default function Header ()
 {
     const router = useRouter()
 
+    const [isSmScreen] = useMediaQuery("(max-width: 600px)") 
+
     return <Flex width={'100%'}
         borderBottom={'1px solid'}
-        mb={2}
+        mb={2} py={3} px={4}
     >
-        <Flex 
-            maxW={'1200px'} m={'0 auto'} 
-            py={4} px={2}
-            width={'100%'}
-            justifyContent={'center'}   gap={10} 
+        <Flex width={'100%'} maxW={'1400px'} m={'0 auto'}
+            justifyContent={isSmScreen ? 'center' : 'initial'}
+            flexDir={isSmScreen ? 'column': 'initial'}
+            gap={4}
+            alignItems={'center'}
         >
-            {headerLinks.map((l,i)=> {
-                return <Link key={i} href={l.link}>
-                    <Flex fontSize={'lg'} alignItems={'center'} 
-                        gap={1}
-                        cursor={'pointer'} _hover={{
-                            textDecoration: 'underline'
-                        }}
-                        textDecoration={router.route == l.link ? 'underline' : 'none'}
+            <Logo />
+
+            <Flex gap={5} ml={isSmScreen ? 'initial':'auto'}  alignItems={'center'} justifyContent={'center'}>
+                {headerLinks.map((l,i)=> {
+                    return <IconLink key={i} icon={l.icon} 
+                    url={l.link} highlighted={(router.route == l.link)}
                     >
-                        {l.icon}  {l.heading}
-                    </Flex>
-                </Link>
-            })}
+                        {l.heading}
+                    </IconLink>
+                })}
+
+                <ThemeToggler size={'sm'}/>
+            </Flex>
         </Flex>
     </Flex>
+}
+
+const Logo = ()=> {
+    return <Link href={'/'}>
+        <Flex alignItems={'center'} gap={1} fontWeight={'bold'} justifySelf={'flex-start'}>
+            <Image 
+                src={'/images/palestine_flag_logo.png'}
+                width={30}
+                height={30}
+                quality={100}
+                alt="palestine_flag_logo"
+                />
+            The Palestinian Side
+        </Flex>
+    </Link> 
 }
