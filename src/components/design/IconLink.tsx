@@ -15,7 +15,7 @@ export interface IconLinkProps
 export default function IconLink (props: IconLinkProps) 
 {
     return <Link href={props.url}>
-        <IconText icon={props.icon} highlighted={props.highlighted}>
+        <IconText icon={props.icon} highlighted={props.highlighted} {...props.flexProps}>
             {props.children}
         </IconText>
     </Link>
