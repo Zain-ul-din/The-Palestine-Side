@@ -1,13 +1,24 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-
 import Home from '@/components/Home';
+import { GetStaticPropsContext } from 'next';
+import { API_ENDPOINTS } from '@/lib/constant';
+import TableOfContent from '@/types/TableOfContent';
 
-const inter = Inter({ subsets: ['latin'] });
+export async function getStaticProps(context: GetStaticPropsContext) 
+{
+    const res = await fetch(API_ENDPOINTS.TableOfContent)
+    const tableOfContent = (await res.json())
 
-export default function Page() {
+    return {
+        props: {
+            tableOfContent
+        },
+        revalidate: 2
+    };
+}
+
+export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent }) 
+{
     return (
         <>
             <Head>
@@ -16,8 +27,10 @@ export default function Page() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={`${styles.main} ${inter.className}`}>
-                <Home />
+            <main>
+                <Home 
+                    tableOfContent={tableOfContent}
+                />
             </main>
         </>
     );
