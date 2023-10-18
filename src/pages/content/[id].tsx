@@ -2,8 +2,6 @@ import ContentLayout from "@/Layout/ContentLayout";
 import MarkDownContent from "@/components/MarkDownContent";
 import Head from "next/head";
 
-
-
 export default function Page ({ content } : { content: string}) 
 {
     return <>
@@ -23,13 +21,12 @@ export default function Page ({ content } : { content: string})
     </>
 }
 
-import { CONTENT_DIR } from "@/lib/constant";
-import { readFileSync, readdirSync } from "fs";
 import { GetStaticPropsContext } from "next";
+import getContentOfFile, { getTableOfContent } from "@/lib/content";
 
 export async function getStaticPaths () 
 {
-    const tableOfContent = readdirSync(CONTENT_DIR);
+    const tableOfContent = getTableOfContent();
     const paths = tableOfContent.map(p => ({ params: { id: p } }))
     
     return { paths, fallback: true }
@@ -38,8 +35,8 @@ export async function getStaticPaths ()
 export async function getStaticProps(context: GetStaticPropsContext)
 {
     const { id } = context.params as { id: string}
-    const fileContent = readFileSync(`${CONTENT_DIR}/${id}.md`, "utf-8")
-    
+    const fileContent = getContentOfFile(id) 
+
     return {
         props: {
             content: fileContent

@@ -15,24 +15,20 @@ export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent
             <main>
                 <Home 
                     tableOfContent={tableOfContent}
-                    />
+                />
             </main>
         </>
     );
 }
 
 import { GetStaticPropsContext } from 'next';
-import { CONTENT_DIR } from '@/lib/constant';
-import { readdirSync } from 'fs';
+import { getTableOfContent } from '@/lib/content';
 
 export async function getStaticProps(context: GetStaticPropsContext) 
 {
-    const tableOfContent =  readdirSync(CONTENT_DIR).map(name=> `${name.replace(/^(.*?)\.[^.]+$/, '$1')}`)
+    const tableOfContent =  getTableOfContent()
     
     return {
-        props: {
-            tableOfContent
-        },
-        revalidate: 2
+        props: { tableOfContent }, revalidate: 2
     };
 }
