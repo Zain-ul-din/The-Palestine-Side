@@ -20,7 +20,8 @@ export default function Footer ()
             <IconText icon={<AiOutlineShareAlt/>} onClick={()=> {
                 navigator.share({
                     /** TODO: add share meta */
-                    title: 'The Palestine Side'
+                    title: 'The Palestine Side',
+                    url: window.location.href
                 })
             }}>
                 Share
