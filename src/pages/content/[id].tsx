@@ -1,30 +1,8 @@
 import ContentLayout from "@/Layout/ContentLayout";
 import MarkDownContent from "@/components/MarkDownContent";
-import { API_ENDPOINTS } from "@/lib/constant"
-import { GetStaticPropsContext } from "next"
-import Head from "next/head"
+import Head from "next/head";
 
-export async function getStaticPaths () 
-{
-    const res = await fetch(API_ENDPOINTS.TableOfContent);
-    const paths = (await res.json()).map((p: string) => ({ params: { id: p } }))
-    
-    return { paths, fallback: true }
-}
 
-export async function getStaticProps(context: GetStaticPropsContext)
-{
-    const { id } = context.params as { id: string}
-    const res = await fetch(`${API_ENDPOINTS.Content}?id=${encodeURIComponent(id)}`)
-    const { content } = await res.json()
-    
-    return {
-        props: {
-            content
-        },
-        revalidate: 5
-    }
-}
 
 export default function Page ({ content } : { content: string}) 
 {
@@ -44,3 +22,29 @@ export default function Page ({ content } : { content: string})
         </main>
     </>
 }
+
+import { CONTENT_DIR } from "@/lib/constant";
+import { readFileSync, readdirSync } from "fs";
+import { GetStaticPropsContext } from "next";
+
+export async function getStaticPaths () 
+{
+    const tableOfContent = readdirSync(CONTENT_DIR);
+    const paths = tableOfContent.map(p => ({ params: { id: p } }))
+    
+    return { paths, fallback: true }
+}
+
+export async function getStaticProps(context: GetStaticPropsContext)
+{
+    const { id } = context.params as { id: string}
+    const fileContent = readFileSync(`${CONTENT_DIR}/${id}.md`, "utf-8")
+    
+    return {
+        props: {
+            content: fileContent
+        },
+        revalidate: 5
+    }
+}
+
