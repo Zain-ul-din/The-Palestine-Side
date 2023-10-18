@@ -1,21 +1,6 @@
 import Head from 'next/head';
 import Home from '@/components/Home';
-import { GetStaticPropsContext } from 'next';
-import { API_ENDPOINTS } from '@/lib/constant';
 import TableOfContent from '@/types/TableOfContent';
-
-export async function getStaticProps(context: GetStaticPropsContext) 
-{
-    const res = await fetch(API_ENDPOINTS.TableOfContent)
-    const tableOfContent = (await res.json())
-
-    return {
-        props: {
-            tableOfContent
-        },
-        revalidate: 2
-    };
-}
 
 export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent }) 
 {
@@ -30,8 +15,24 @@ export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent
             <main>
                 <Home 
                     tableOfContent={tableOfContent}
-                />
+                    />
             </main>
         </>
     );
+}
+
+import { GetStaticPropsContext } from 'next';
+import { CONTENT_DIR } from '@/lib/constant';
+import { readdirSync } from 'fs';
+
+export async function getStaticProps(context: GetStaticPropsContext) 
+{
+    const tableOfContent =  readdirSync(CONTENT_DIR).map(name=> `${name.replace(/^(.*?)\.[^.]+$/, '$1')}`)
+    
+    return {
+        props: {
+            tableOfContent
+        },
+        revalidate: 2
+    };
 }
