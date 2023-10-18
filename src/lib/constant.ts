@@ -9,3 +9,5 @@ export const ROUTES = {
     Resources: '/Resources',
     Content: '/content/' // dynamic route
 }
+
+export const CONTENT_DIR = './content'
