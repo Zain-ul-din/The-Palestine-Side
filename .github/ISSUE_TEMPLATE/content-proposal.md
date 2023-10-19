@@ -29,7 +29,7 @@ assignees: ''
 
 ### Questions:
 
-- [ ] Are you sure this content is not already covered in the repository or elsewhere? 
+- [ ] Are you sure this content is not already covered in the repository? 
 - [ ] Do you intend to improve someone else's existing content? If so, please provide details somewhere. 
 - [ ] How will your proposed content contribute to the understanding of the Israel-Palestine issue?
 - [ ] Is this a time-sensitive topic or event that needs immediate attention?
