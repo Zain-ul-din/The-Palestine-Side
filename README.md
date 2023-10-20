@@ -1,7 +1,4 @@
-### Vision
-
-I developed a website aimed at educating individuals about the historical context of the Palestine issue, providing valuable insights and understanding on the topic.
-
+# Check Purpose of [this repo](https://github.com/Zain-ul-din/The-Palestinian-Side/issues/1)
 ![Stand With Palestine](https://raw.githubusercontent.com/22mahmoud/StandWithPalestine/main/public/StandWithPalestine.svg)
 
 
