@@ -5,7 +5,7 @@ import IconLink from "./design/IconLink";
 
 export default function Footer () 
 {
-    return <Flex borderTop={'1px solid'} mt={'auto'}>
+    return <Flex borderTop={'1px solid'} mt={'auto'} borderColor={'gray.700'}>
         <Flex width={'100%'} 
             p={2} maxW={'1400px'} m={'0 auto'}
             justifyContent={'center'}
