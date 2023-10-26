@@ -1,7 +1,8 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import IconText from "./design/IconText";
 import { AiOutlineTeam, AiOutlineShareAlt } from "react-icons/ai";
 import IconLink from "./design/IconLink";
+import { LINKS } from "@/lib/constant";
 
 export default function Footer () 
 {
@@ -12,8 +13,7 @@ export default function Footer ()
             alignItems={'center'}
             gap={10}
         >
-            {/* TODO: add contribution link */}
-            <IconLink url="/" icon={<AiOutlineTeam />}>
+            <IconLink url={LINKS.Contribute_Github} icon={<AiOutlineTeam />}>
                 Contribute
             </IconLink>
 
