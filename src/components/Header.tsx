@@ -1,10 +1,9 @@
-import { Button, Flex, useMediaQuery } from "@chakra-ui/react";
+import { Flex, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { BiHome, BiSolidVideos, BiNews } from "react-icons/bi";
 import IconLink from "./design/IconLink";
 import Image from "next/image";
-import { MoonIcon } from "@chakra-ui/icons";
 import ThemeToggler from "./design/ThemeToggler";
 import Link from "next/link";
 
@@ -38,10 +37,10 @@ export default function Header ()
     const router = useRouter()
 
     const [isSmScreen] = useMediaQuery("(max-width: 600px)") 
-
-    return <Flex width={'100%'}
+    
+    return <Flex width={'100%'} 
         borderBottom={'1px solid'}
-        mb={2} py={3} px={4}
+        mb={2} py={3} px={4} borderColor={'gray.700'}
     >
         <Flex width={'100%'} maxW={'1400px'} m={'0 auto'}
             justifyContent={isSmScreen ? 'center' : 'initial'}
