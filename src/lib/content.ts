@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "fs";
+import { readFileSync, readdirSync, lstatSync } from "fs";
 
 const CONTENT_DIR = "./content"
 
@@ -8,7 +8,10 @@ const CONTENT_DIR = "./content"
 */
 export function getTableOfContent ()
 {
-    return readdirSync(CONTENT_DIR).map(name=> `${name.replace(/^(.*?)\.[^.]+$/, '$1')}`)
+    return readdirSync(CONTENT_DIR)
+    /** ignores any folder inside content folder*/
+    .filter(name => lstatSync(`${CONTENT_DIR}/${name}`).isFile())
+    .map(name=> `${name.replace(/^(.*?)\.[^.]+$/, '$1')}`)
 }
 
 /**
