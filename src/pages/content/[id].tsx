@@ -22,7 +22,7 @@ export default function Page ({ content } : { content: string})
 }
 
 import { GetStaticPropsContext } from "next";
-import getContentOfFile, { getTableOfContent } from "@/lib/content";
+import  { getTableOfContent, getContentOfFile } from "@/lib/content";
 
 export async function getStaticPaths () 
 {
