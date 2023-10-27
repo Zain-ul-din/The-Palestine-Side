@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, lstatSync } from "fs";
 
 const CONTENT_DIR = "./content"
+const VIDEOS_DIR = `${CONTENT_DIR}/videos`
 
 /**
  * Returns table of content
@@ -18,7 +19,16 @@ export function getTableOfContent ()
  * Return content of file from content directory
  * @param fileName file name with out extension
  */
-export default function getContentOfFile(fileName: string, ext: string = '.md')
+export function getContentOfFile(fileName: string, ext: string = '.md')
 {
     return readFileSync(`${CONTENT_DIR}/${fileName}${ext}`, "utf-8")
+}
+
+/**
+ * Returns videos content from content/videos directory
+ * @returns  Object
+*/
+export function getVideosContent()
+{
+    return JSON.parse(readFileSync(`${VIDEOS_DIR}/content.json`, "utf-8"))
 }
