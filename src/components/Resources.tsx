@@ -30,7 +30,7 @@ export default function Resources ({ content } : { content: ResourceContent })
                                 {resource.title}
                             </Text>
                         </Link>
-                        <Text fontWeight={'bold'} fontFamily={'monospace'} color={'gray.700'} overflow={'hidden'} textOverflow={'ellipsis'}>
+                        <Text fontWeight={'bold'} fontFamily={'monospace'} color={colorMode == "light" ? 'gray.700' : 'gray.400'} overflow={'hidden'} textOverflow={'ellipsis'}>
                             {resource.source.toUpperCase()}
                         </Text>
                         <Divider></Divider>
