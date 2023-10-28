@@ -1,11 +1,13 @@
+import useIpInfo from "@/hooks/useIpInfo";
 import VideosContent from "@/types/VideosContent";
-import { Box, Divider, Flex, Input, Text } from "@chakra-ui/react";
+import { Box, Flex, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
 export default function VideoGallery ({ content } : { content: VideosContent } )
 {
     const [input, setInput] = useState<string>("")
-
+    const ipInfo = useIpInfo()
+    
     return <Flex width={'100%'} flexDir={'column'}>
         <Flex justifyContent={'center'}>
             <Box my={4}>
@@ -26,6 +28,7 @@ export default function VideoGallery ({ content } : { content: VideosContent } )
             gap={'8px'}
         >
             {content.videos
+            .filter(v => v.country == undefined || (ipInfo && ipInfo.country == v.country))
             .filter(v=> v.title.toLowerCase().includes(input.toLowerCase()))
             .map((video, idx)=> {
                 return <Flex key={idx} flexDir={'column'} gap={2}
