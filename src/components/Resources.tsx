@@ -21,7 +21,9 @@ export default function Resources ({ content } : { content: ResourceContent })
                 value={input}
             />
             <Flex flexDir={'column'} gap={4}>
-                {content.resources.map((resource,idx)=> {
+                {content.resources
+                .filter(r => r.title.toLowerCase().includes(input.toLowerCase()) || r.source.toLowerCase().includes(input.toLowerCase()))
+                .map((resource,idx)=> {
                     return <Flex flexDir={'column'} gap={1} key={idx}>
                         <Link href={resource.url} target="_blank">
                             <Text textDecoration={'underline'} cursor={'pointer'} overflow={'hidden'} textOverflow={'ellipsis'}>
