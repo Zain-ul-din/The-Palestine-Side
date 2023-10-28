@@ -15,6 +15,7 @@ export default function VideoGallery ({ content } : { content: VideosContent } )
                     width={'20rem'}
                     placeholder="Search Video"
                     onChange={(e)=> setInput(e.target.value)}
+                    value={input}
                 />
             </Box>
         </Flex>
