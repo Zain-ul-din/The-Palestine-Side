@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-import { Flex, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
+import { Flex, Heading, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function MarkDownContent (
@@ -15,7 +15,7 @@ export default function MarkDownContent (
                 components={ChakraUIRenderer({
                     li: props=> {
                         const { children } = props
-                        return <Text display={'list-item'}>{children}</Text>
+                        return <ListItem>{children}</ListItem>
                     },
                     ul: props => {
                         const { children } = props
@@ -36,6 +36,18 @@ export default function MarkDownContent (
                         return <Text as="strong" bg={colorMode == "dark" ? 'green.500' : 'yellow.300'} 
                             p={'2px'} rounded={'sm'}
                         >{children}</Text>
+                    },
+                    h3: props => {
+                        const { children } = props
+                        return <Heading fontSize={'xl'} my={3}>
+                            {children}
+                        </Heading>
+                    },
+                    h2: props => {
+                        const { children } = props
+                        return <Heading fontSize={'3xl'} my={3}>
+                            {children}
+                        </Heading>
                     }
                 })}
                 skipHtml
