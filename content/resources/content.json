@@ -1,5 +1,10 @@
 {
     "resources" : [
-        { "title": "What’s the Israel-Palestine conflict about?", "url": "https://www.aljazeera.com/news/2023/10/9/whats-the-israel-palestine-conflict-about-a-simple-guide", "source": "al-jazeera" }
+        { "title": "What’s the Israel-Palestine conflict about?", "url": "https://www.aljazeera.com/news/2023/10/9/whats-the-israel-palestine-conflict-about-a-simple-guide", "source": "al-jazeera" },
+        { "title": "Quick Facts: The Palestinian Nakba", "url": "https://imeu.org/article/quick-facts-the-palestinian-nakba", "source": "IMEU" },
+        { "title": "This Is Palestine", "url": "https://this-is-palestine.simplecast.com/", "source": "This Is Palestine"},
+        { "title": "The Nakba and Palestine Refugees | IMEU", "url": "https://imeu.org/article/the-nakba-and-palestine-refugees-imeu-questions-and-answers", "source": "IMEU" },
+        { "title" :"First steps to stand for Palestinian freedom.", "url": "https://www.jewishvoiceforpeace.org/2023/10/18/first-steps/", "source": "jewish-voice-for-peace" },
+        { "title": "Israeli Settlements | IMEU Policy Backgrounder", "url": "https://imeu.org/article/israeli-settlements-imeu-policy-backgrounder", "source": "IMEU"}
     ]
 }
