@@ -15,7 +15,7 @@ export default function MarkDownContent (
                 components={ChakraUIRenderer({
                     li: props=> {
                         const { children } = props
-                        return <ListItem>{children}</ListItem>
+                        return <ListItem lineHeight={'1.6rem'}>{children}</ListItem>
                     },
                     ul: props => {
                         const { children } = props
@@ -37,13 +37,14 @@ export default function MarkDownContent (
                     },
                     strong: props => {
                         const { children } = props
-                        return <Text as="strong" bg={colorMode == "dark" ? 'green.500' : 'yellow.300'} 
-                            p={'2px'} rounded={'sm'}
+                        return <Text as="strong" bg={colorMode == "dark" ? 'yellow.200' : 'yellow.300'} 
+                            color={colorMode == "dark" ? 'black' : 'initial'}
+                            px={'2px'} rounded={'sm'} 
                         >{children}</Text>
                     },
                     h3: props => {
                         const { children } = props
-                        return <Heading fontSize={'xl'} my={3}>
+                        return <Heading as={'h3'} fontSize={'xl'} my={3}>
                             {children}
                         </Heading>
                     },
