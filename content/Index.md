@@ -13,6 +13,7 @@ Sources
 <!-- 
     sources:
         https://imeu.org/article/the-gaza-strip-imeu-policy-backgrounder
+        https://www.google.com/search?q=Gaza%3A+An+Inquest+Into+Its+Martyrdom
 -->
 
 ### West Bank
