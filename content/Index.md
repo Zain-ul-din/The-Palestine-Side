@@ -2,21 +2,21 @@
 
 - Gaza is situated between Israel to the north and east, Egypt to the south, and the Mediterranean Sea to the west. during 1948 war approximately 250,000 Palestinians driven out of their homes. israel denied them their right of return to their homes afterward. **Currently, nearly 70% of the population in Gaza comprises refugees from the 1948 war.** Gaza is known for having the *"second-highest proportion of people [aged 0 to 14](https://www.npr.org/2023/10/19/1206479861/israel-gaza-hamas-children-population-war-palestinians) globally."* This region, often cited as one of the most [densely populated](https://www.washingtonpost.com/news/worldviews/wp/2014/07/14/gaza-city-is-being-hit-by-missile-strikes-this-is-how-densely-populated-it-is/) populated areas on the planet, spans 41 kilometers (25 miles) in length and 6 to 12 kilometers (3.7 to 7.5 miles) in width, covering a total area of 365 square kilometers. It is home to approximately 2 million people.
 
-- In 1948, following the Arab-Israeli war, Gaza came under Egyptian administration, and a significant population of Palestinian refugees found refuge in the region after being forced out of their homes. In 1956, the [Suez Crisis](https://en.wikipedia.org/wiki/Suez_Crisis) occurred, during which Israel, along with the United Kingdom and France, invaded Gaza and the Sinai Peninsula after Egyptian President Gamal Abdel Nasser nationalized the Suez Canal. The conflict concluded under international pressure in 1957, and Gaza continued to be under Egyptian administration.
+- In 1948, following the Arab-Israeli war, Gaza came under Egyptian administration, and a significant population of Palestinian refugees found refuge in the region after being forced out of their homes. In 1956, the [Suez Crisis](https://en.wikipedia.org/wiki/Suez_Crisis) occurred, during which Israel, along with the United Kingdom and France, invaded Gaza and the Sinai Peninsula after Egyptian President Gamal Abdel Nasser nationalized the Suez Canal. The conflict concluded under international pressure in 1957, and Gaza continued to be under Egyptian administration. At the conclusion of the conflict, over a thousand individuals from Gaza lost their lives.
 
 - In the 1967 war, Israel gained control over Gaza and maintained occupation until 2005. Similar to the West Bank and East Jerusalem, Israel established Jewish settlements in the Gaza Strip. By 2005, around 7,000 Israeli settlers resided in 16 settlements there. 
 
-- 
-
-Sources
-
-- *[the-gaza-strip-imeu](https://imeu.org/article/the-gaza-strip-imeu-policy-backgrounder)*
+- In 2005, Israeli settlers and troops withdrew from the Gaza Strip under international pressure. However, Israel continued its military occupation by exerting control externally and enforcing a land, sea, and air blockade after the 2006 Palestinian legislative election. The [UN Special Rapporteur](https://www.ohchr.org/en/press-releases/2020/07/israels-collective-punishment-palestinians-illegal-and-affront-justice-un?LangID=E&NewsID=26111) on the Palestinian Territory occupied since 1967 has condemned Israel's persistent blockade of the Gaza Strip as an unlawful form of collective punishment. 
 
 <!-- 
     sources:
         https://imeu.org/article/the-gaza-strip-imeu-policy-backgrounder
         https://www.google.com/search?q=Gaza%3A+An+Inquest+Into+Its+Martyrdom
 -->
+
+### "Human Rights"
+
+- <pending...>
 
 ### West Bank
 
@@ -40,9 +40,7 @@ Sources
 
 - <pending...>
 
-### "Human Rights"
-
-- <pending...>
+- Israel is not a blameless entity being attacked and safeguarding itself, as it presents itself in the [global media](https://www.nst.com.my/opinion/columnists/2023/10/973351/who-has-right-self-defence-occupier-or-occupied). It is a colonial, settler-based apartheid system formed on the remains of Palestine, resulting from the displacement and forced removal of the Palestinian people after their [catastrophe (al-Nakba)](https://imeu.org/article/quick-facts-the-palestinian-nakba) in 1948.
 
 ### "Human Shield"
 
