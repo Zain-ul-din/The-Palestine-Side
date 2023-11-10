@@ -16,7 +16,13 @@
 
 ### "Human Rights"
 
-- <pending...>
+- In 2005, Israel said it wasn't in charge of Gaza anymore. But many human rights groups and global organizations disagreed. They argued that Israel still had a lot of control over Gaza, whether its military was inside or around the borders. According to [Human Rights Watch](https://www.hrw.org/news/2004/10/28/israel-disengagement-will-not-end-gaza-occupation), Israel continued to have power over the area.
+
+- Due to [Israel's blockade of Gaza](https://imeu.org/article/putting-palestinians-on-a-diet-israels-siege-blockade-of-gaza), Life for Palestinians there became really hard. **According to the [UN Office for the Coordination of Humanitarian Affairs](https://www.ochaopt.org/page/gaza-strip-critical-humanitarian-indicators), Israel delayed or said no to 37% of requests for Palestinians to leave for medical reasons. Palestinians had only 80% of the minimum water recommended by WHO. Many Palestinians bought lower-quality food because of food insecurity. They had electricity for only 13 hours a day. 9,000 Palestinians who lost their homes in previous Israeli attacks still need help.** The Israeli government's policies caused this humanitarian crisis. A government adviser even said they wanted to *"put the Palestinians on a diet."*
+
+- israel has significantly restricted the movement of Palestinians and goods in and out of Gaza. Students in Gaza are unable to travel to universities in the West Bank, which offer unique fields of study not available locally. Essential materials like steel and cement, crucial for construction and rebuilding homes destroyed in recent and past Israeli military attacks, are strictly prohibited. 
+
+- Additionally, **items essential for daily life, including food items, sanitary products, school supplies, fuel, agricultural supplies, and other everyday items, are also limited to some extent.** The restrictions imposed by Israel have created significant challenges for the people of Gaza in various aspects of their daily lives.
 
 ### West Bank
 
