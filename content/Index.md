@@ -46,6 +46,8 @@
 
 - <pending...>
 
+- Violating human rights or causing harm to civilians is not 'self-defense'. In the guise of 'self-defense', Israel caused harm to numerous civilians, including women and children, by violating human rights. They targeted hospitals, schools, and civilian residences.
+
 - Israel is not a blameless entity being attacked and safeguarding itself, as it presents itself in the [global media](https://www.nst.com.my/opinion/columnists/2023/10/973351/who-has-right-self-defence-occupier-or-occupied). It is a colonial, settler-based apartheid system formed on the remains of Palestine, resulting from the displacement and forced removal of the Palestinian people after their [catastrophe (al-Nakba)](https://imeu.org/article/quick-facts-the-palestinian-nakba) in 1948.
 
 ### "Human Shield"
