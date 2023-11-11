@@ -10,7 +10,10 @@ export default function MarkDownContent (
     const { colorMode } = useColorMode()
 
     return <>
-        <Flex p={4} flexDir={'column'}>
+        <Flex p={4} flexDir={'column'} 
+            bg={colorMode == "light" ? 'gray.50' : 'whiteAlpha.50'} 
+            rounded={'md'}
+        >
             <Markdown
                 components={ChakraUIRenderer({
                     li: props=> {
@@ -19,7 +22,7 @@ export default function MarkDownContent (
                     },
                     ul: props => {
                         const { children } = props
-                        return <UnorderedList my={2} mb={4} pl={2}>
+                        return <UnorderedList my={2} mb={4} pl={1}>
                             {children}
                         </UnorderedList> 
                     },
@@ -31,7 +34,7 @@ export default function MarkDownContent (
                         const { children } = props
                         return  <Link href={props.href as string} style={{
                             textDecoration: 'underline'
-                        }}>
+                        }} target="_blank">
                             {children}
                         </Link>
                     },

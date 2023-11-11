@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Home from '@/components/Home';
-import TableOfContent from '@/types/TableOfContent';
 
-export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent }) 
+export default function Page({ content }:{ content: string }) 
 {
     return (
         <>
@@ -13,22 +12,27 @@ export default function Page({ tableOfContent }:{ tableOfContent: TableOfContent
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <Home 
-                    tableOfContent={tableOfContent}
-                />
+                <ContentLayout p={2}>
+                    <Home />
+                    <MarkDownContent>
+                        {content}
+                    </MarkDownContent>
+                </ContentLayout>
             </main>
         </>
     );
 }
 
 import { GetStaticPropsContext } from 'next';
-import { getTableOfContent } from '@/lib/content';
+import { getContentOfFile } from '@/lib/content';
+import ContentLayout from '@/Layout/ContentLayout';
+import MarkDownContent from '@/components/MarkDownContent';
 
 export async function getStaticProps(context: GetStaticPropsContext) 
 {
-    const tableOfContent =  getTableOfContent()
-    
+    const content = getContentOfFile("index")
+
     return {
-        props: { tableOfContent }, revalidate: 2
+        props: { content }, revalidate: 2
     };
 }
