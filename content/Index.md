@@ -1,7 +1,4 @@
-<!-- internal links -->
-### Start from here
 
-- [The history](/content/The%20History)
 
 ### Gaza Strip
 
@@ -50,7 +47,13 @@
 
 ### Ongoing Israeli Aggression
 
-- <todo> 
+- Since 1949, millions have faced forced displacement from their homes, and numerous lives, particularly those of children, have been lost due to Israeli aggression, constituting a series of catastrophes and wars. Additionally, a significant number have been abducted and turned into hostages.
+
+- **In just a few days, israeli military has killed over [10,000 Palestinians](https://imeu.org/uploads/files/List_of_victims,_Gaza,_Final_.pdf) in Gaza, the majority (4,100) of whom are under 14.** Whole neighborhoods have been destroyed by Israeli warplanes. Scared children are looking for their parents in the wreckage. Additionally, thousands remain trapped beneath the rubble, desperate for help.
+
+- **Israel has cut off water supplies, fuel supplies, electricity supplies and even food and has prevented virtually all supplies from countries around the world from reaching the besieged Gaza Strip. It's the worst disaster ever. Many children have died because hospitals can't use electricity.** The people in Gaza are running out of food and clean water.
+
+- **It's not just with Hamas.** Israel is bombing places where regular people live, like homes and hospitals, with the goal of hurting civilians. Israel's plan is to create a second [Nakba("Catastrophe")](https://imeu.org/article/quick-facts-the-palestinian-nakba) so that they can occupy the Gaza Strip.
 
 ### "Self Defense"
 
@@ -68,3 +71,17 @@
 
 - Many pro-Israel individuals claim, "Hamas is using human shields" But, they don't have any evidence. **Several reports,  including one titled [Operation “Cast Lead”: 22 days of death and destruction](https://www.amnesty.org/en/documents/mde15/015/2009/en/), indicate that there is no proof of 'human shielding' from the Palestinian side or Hamas.** 
 
+<!-- More links -->
+
+### Also See
+
+<!-- internal links -->
+- [The history.](/content/The%20History) 
+
+- [Israel’s History of Spreading Disinformation.](https://imeu.org/article/fact-sheet-israels-history-of-spreading-disinformation)
+
+- [This is Palestine](https://this-is-palestine.simplecast.com/)
+
+- [5 Things You Need to Know About the Latest Violence in Palestine/Israel.](https://imeu.org/article/5-things-you-need-to-know-about-the-latest-violence-in-palestine-israel)
+
+- [6 Things to Remember When Covering Israeli Settler Violence.](https://imeu.org/article/6-things-to-remember-when-covering-israeli-settler-violence)
