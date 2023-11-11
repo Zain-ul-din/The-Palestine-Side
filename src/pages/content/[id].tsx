@@ -27,8 +27,7 @@ import  { getTableOfContent, getContentOfFile } from "@/lib/content";
 export async function getStaticPaths () 
 {
     const tableOfContent = getTableOfContent();
-    const paths = tableOfContent.map(p => ({ params: { id: p } }))
-    
+    const paths = tableOfContent.map((p: any) => ({ params: { id: p } }))
     return { paths, fallback: true }
 }
 
