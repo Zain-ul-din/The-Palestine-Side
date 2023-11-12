@@ -6,7 +6,7 @@ import IconLink from "./design/IconLink";
 import Image from "next/image";
 import ThemeToggler from "./design/ThemeToggler";
 import Link from "next/link";
-import { BsThreeDotsVertical } from "react-icons/BS";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { ROUTES } from "@/lib/constant";
 
 interface HeaderLink 
