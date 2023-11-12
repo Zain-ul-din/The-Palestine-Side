@@ -1,4 +1,4 @@
-import { Flex, useMediaQuery } from "@chakra-ui/react";
+import { Button, Flex, Icon, Menu, MenuButton, MenuItem, MenuList, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
 import { BiHome, BiSolidVideos, BiNews } from "react-icons/bi";
@@ -6,6 +6,8 @@ import IconLink from "./design/IconLink";
 import Image from "next/image";
 import ThemeToggler from "./design/ThemeToggler";
 import Link from "next/link";
+import { BsThreeDotsVertical } from "react-icons/BS";
+import { ROUTES } from "@/lib/constant";
 
 interface HeaderLink 
 {
@@ -37,6 +39,7 @@ export default function Header ()
     const router = useRouter()
 
     const [isSmScreen] = useMediaQuery("(max-width: 600px)") 
+    const [isBaseScreen] = useMediaQuery("(max-width: 360px)")
     
     return <Flex width={'100%'} 
         borderBottom={'1px solid'}
@@ -50,16 +53,23 @@ export default function Header ()
         >
             <Logo />
 
-            <Flex gap={5} ml={isSmScreen ? 'initial':'auto'}  alignItems={'center'} justifyContent={'center'}>
+            <Flex gap={isBaseScreen ? 2 : 5} ml={isSmScreen ? 'initial':'auto'}  alignItems={'center'} justifyContent={'center'}
+                flexWrap={isBaseScreen ? 'wrap' : 'initial'}
+            >
                 {headerLinks.map((l,i)=> {
                     return <IconLink key={i} icon={l.icon} 
-                    url={l.link} highlighted={(router.route == l.link)}
+                        url={l.link} highlighted={(router.route == l.link)}
+                        flexProps={{
+                            fontSize: isSmScreen ? 'sm' : 'inherit'
+                        }}
                     >
                         {l.heading}
                     </IconLink>
                 })}
 
                 <ThemeToggler size={'sm'}/>
+                
+                <AdditionalNavLinks /> 
             </Flex>
         </Flex>
     </Flex>
@@ -79,3 +89,18 @@ const Logo = ()=> {
         </Flex>
     </Link> 
 }
+
+const AdditionalNavLinks = ()=> (
+    <>
+    <Menu>
+        <MenuButton as={Button} size={'sm'}>
+            <BsThreeDotsVertical />
+        </MenuButton>
+        <MenuList>
+            <Link href={ROUTES.Martyrs}>
+                <MenuItem>Martyrs</MenuItem>
+            </Link>
+        </MenuList>
+    </Menu>
+    </>
+)
