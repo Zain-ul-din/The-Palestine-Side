@@ -25,8 +25,8 @@ import { FIREBASE_ANALYTICS_EVENTS, useFirebaseAnalyticsReport } from "@/lib/fir
 
 export function getStaticProps(context: GetStaticPropsContext) {
 
-    const martyrs = JSON.parse(readFileSync(DATA_SOURCE.Martyrs, "utf-8"))
-
+    const martyrs = JSON.parse(readFileSync(process.cwd() + DATA_SOURCE.Martyrs, "utf-8"))
+    
     return {
         props: {
             martyrs
