@@ -20,3 +20,10 @@ export const LINKS = {
 export const DATA_SOURCE = {
     Martyrs: './data/martyrs.json'
 }
+
+/**
+ * Local storage keys
+*/
+export const LOCAL_STORAGE_KEYS = {
+    IP_INFO: 'IP_INFO'
+}
