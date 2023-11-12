@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import IconText from "./design/IconText";
 import { AiOutlineTeam, AiOutlineShareAlt } from "react-icons/ai";
 import IconLink from "./design/IconLink";
@@ -7,6 +7,8 @@ import Link from "next/link";
 
 export default function Footer () 
 {
+    const [isSmScreen] = useMediaQuery("(max-width: 500px)")
+    
     return <Flex borderTop={'1px solid'} mt={'auto'} borderColor={'gray.700'} 
         flexDir={'column'} justifyContent={'center'} alignItems={'center'}
     >
@@ -35,14 +37,13 @@ export default function Footer ()
             {Object.entries(ROUTES).map(([k,v], i)=>{
                 if([ROUTES.Content].includes(v)) return;
                 return <Link href={v} key={i}>
-                    <Text textDecoration={'underline'} fontFamily={'serif'}>{k}</Text>
+                    <Text textDecoration={'underline'} fontFamily={'serif'} fontSize={isSmScreen? 'sm' : 'initial'}>{k}</Text>
                 </Link>
             })}
         </Flex>
         <AlertMessage />
     </Flex>
 }
-
 
 const AlertMessage = ()=> (
     <Text py={4} fontSize={'xs'} fontFamily={'monospace'} textAlign={'center'} px={4} maxW={'40rem'}>
