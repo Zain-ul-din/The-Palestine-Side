@@ -10,6 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             source: 'https://datawrapper.dwcdn.net/SAgXc/2/'
         })
     } catch(err) {
+        console.log("APIS Error: ", err)
         res.status(500).send('server side error')
     }
 }
