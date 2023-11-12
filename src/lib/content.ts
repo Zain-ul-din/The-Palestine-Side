@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, lstatSync } from "fs";
 
-const CONTENT_DIR = "./content"
+const CONTENT_DIR = process.cwd() + "/content"
 const VIDEOS_DIR = `${CONTENT_DIR}/videos`
 const RESOURCES_DIR = `${CONTENT_DIR}/resources`
 

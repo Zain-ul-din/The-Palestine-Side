@@ -18,7 +18,7 @@ export const LINKS = {
  *  Data Source Paths
 */
 export const DATA_SOURCE = {
-    Martyrs: './data/martyrs.json'
+    Martyrs: '/data/martyrs.json'
 }
 
 /**
