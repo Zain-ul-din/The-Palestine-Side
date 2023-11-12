@@ -30,6 +30,7 @@ import { FIREBASE_ANALYTICS_EVENTS, useFirebaseAnalyticsReport } from "@/lib/fir
 export async function getStaticPaths () 
 {
     const tableOfContent = getTableOfContent();
+    console.log(tableOfContent)
     const paths = tableOfContent.map((p: any) => ({ params: { id: p } }))
     return { paths, fallback: true }
 }

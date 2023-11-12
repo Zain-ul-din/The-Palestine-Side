@@ -14,7 +14,7 @@ export function getTableOfContent ()
     /** ignores any folder inside content folder*/
     .filter(name => lstatSync(`${CONTENT_DIR}/${name}`).isFile())
     .map(name=> `${name.replace(/^(.*?)\.[^.]+$/, '$1')}`)
-    .filter(name => name !== "index") // skip index file
+    .filter(name => name.toLowerCase() !== "index") // skip index file
 }
 
 /**
