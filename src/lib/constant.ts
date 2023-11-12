@@ -1,7 +1,7 @@
 export const ROUTES = {
     Home: '/',
+    Resources: '/resources',
     Videos: '/videos',
-    Resources: '/Resources',
     Content: '/content', // dynamic route
     Martyrs: '/martyrs'
 }
