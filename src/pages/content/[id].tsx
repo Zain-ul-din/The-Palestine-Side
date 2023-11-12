@@ -4,6 +4,8 @@ import Head from "next/head";
 
 export default function Page ({ content } : { content: string}) 
 {
+    useFirebaseAnalyticsReport(FIREBASE_ANALYTICS_EVENTS.content)
+    
     return <>
         <Head>
             <title>The Palestinian Side</title>
@@ -23,6 +25,7 @@ export default function Page ({ content } : { content: string})
 
 import { GetStaticPropsContext } from "next";
 import  { getTableOfContent, getContentOfFile } from "@/lib/content";
+import { FIREBASE_ANALYTICS_EVENTS, useFirebaseAnalyticsReport } from "@/lib/firebase_analytics";
 
 export async function getStaticPaths () 
 {
