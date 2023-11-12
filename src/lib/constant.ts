@@ -2,7 +2,8 @@ export const ROUTES = {
     Home: '/',
     Videos: '/videos',
     Resources: '/Resources',
-    Content: '/content' // dynamic route
+    Content: '/content', // dynamic route
+    Martyrs: '/martyrs'
 }
 
 /** 
@@ -10,4 +11,12 @@ export const ROUTES = {
 */
 export const LINKS = {
     Contribute_Github: 'https://github.com/Zain-ul-din/The-Palestinian-Side/issues/new/choose'
+}
+
+
+/**
+ *  Data Source Paths
+*/
+export const DATA_SOURCE = {
+    Martyrs: './data/martyrs.json'
 }
