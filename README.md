@@ -52,4 +52,4 @@ Thank you for being a part of "The Palestine Side" project. Together, let's advo
 ----------------
 
 
-Show some ❤️ for humanity by starring [this website](https://www.palestineside.site/) with others.
+Show some ❤️ for humanity by sharing [this website](https://www.palestineside.site/) with others.
