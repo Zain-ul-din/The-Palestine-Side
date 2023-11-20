@@ -9,7 +9,7 @@ export default function Resources ({ content } : { content: ResourceContent })
     const [isSmallScreen] = useMediaQuery("(max-width: 500px)")
     const [input, setInput] = useState<string>("")
     const { colorMode } = useColorMode()
-
+    
     return <ContentLayout p={isSmallScreen ? 2 : 2}>
         <Flex width={'100%'} flexDir={'column'} gap={8}
             bg={colorMode == "light" ? 'gray.50' : 'whiteAlpha.50'} p={isSmallScreen ? 2 : 4}
