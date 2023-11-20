@@ -33,7 +33,7 @@ export default function Footer ()
             </IconText>
             
         </Flex>
-        <Flex justifyContent={'space-evenly'} flexWrap={'wrap'} my={3} gap={5}>
+        <Flex justifyContent={'space-evenly'} flexWrap={'wrap'} my={3} gap={5} mx={3}>
             {Object.entries(ROUTES).map(([k,v], i)=>{
                 if([ROUTES.Content].includes(v)) return;
                 return <Link href={v} key={i}>

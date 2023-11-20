@@ -100,6 +100,9 @@ const AdditionalNavLinks = ()=> (
             <Link href={ROUTES.Martyrs}>
                 <MenuItem>Martyrs</MenuItem>
             </Link>
+            <Link href={ROUTES.AwesomePalestine}>
+                <MenuItem>Awesome Palestine</MenuItem>
+            </Link>
         </MenuList>
     </Menu>
     </>
