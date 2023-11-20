@@ -2,9 +2,16 @@ import Markdown from "react-markdown";
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { Flex, Heading, List, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
+import { generateHeadingId } from "@/lib/markdown-util";
+
+interface MarkDownConfig {
+    linkRedirect?: '_blank' | '_self',
+    useHashRouting?: boolean
+}
 
 export default function MarkDownContent (
-    { children } : { children: string | null | undefined }
+    { children, markDownConfig } : 
+    { children: string | null | undefined, markDownConfig?: MarkDownConfig }
 ) 
 {
     const { colorMode } = useColorMode()
@@ -34,7 +41,7 @@ export default function MarkDownContent (
                         const { children } = props
                         return  <Link href={props.href as string} style={{
                             textDecoration: 'underline'
-                        }} target="_blank">
+                        }} target={markDownConfig?.linkRedirect || "_blank"}>
                             {children}
                         </Link>
                     },
@@ -47,13 +54,19 @@ export default function MarkDownContent (
                     },
                     h3: props => {
                         const { children } = props
-                        return <Heading as={'h3'} fontSize={'xl'} my={3}>
+                        return <Heading as={'h3'} fontSize={'xl'} my={3} id={
+                            markDownConfig?.useHashRouting ? 
+                            generateHeadingId(children?.toString()) : ""
+                        }>
                             {children}
                         </Heading>
                     },
                     h2: props => {
                         const { children } = props
-                        return <Heading fontSize={'3xl'} my={3}>
+                        return <Heading fontSize={'3xl'} my={3} id={
+                            markDownConfig?.useHashRouting ? 
+                            generateHeadingId(children?.toString()) : ""
+                        }>
                             {children}
                         </Heading>
                     }
