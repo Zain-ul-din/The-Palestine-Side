@@ -3,7 +3,8 @@ export const ROUTES = {
     Resources: '/resources',
     Videos: '/videos',
     Content: '/content', // dynamic route
-    Martyrs: '/martyrs'
+    Martyrs: '/martyrs',
+    AwesomePalestine: '/awesome-palestine'
 }
 
 /** 
@@ -26,4 +27,11 @@ export const DATA_SOURCE = {
 */
 export const LOCAL_STORAGE_KEYS = {
     IP_INFO: 'IP_INFO'
+}
+
+/*
+    External API end points
+*/
+export const EXTERNAL_API_LINKS = {
+    AWESOME_PALESTINE_README: 'https://raw.githubusercontent.com/aborazmeh/awesome-palestine/main/README.md'
 }
