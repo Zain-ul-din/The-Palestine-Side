@@ -18,7 +18,8 @@ export default function MarkDownContent (
     const { colorMode } = useColorMode()
 
     return <>
-        <Flex p={4} flexDir={'column'} 
+        <Flex 
+            p={4} flexDir={'column'} 
             bg={colorMode == "light" ? 'gray.50' : 'whiteAlpha.50'} 
             rounded={'md'}
         >
