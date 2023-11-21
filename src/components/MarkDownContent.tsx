@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Markdown from "react-markdown";
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { Flex, Heading, List, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
@@ -69,6 +70,16 @@ export default function MarkDownContent (
                         }>
                             {children}
                         </Heading>
+                    },
+                    img: props => {
+                        const { alt, src } = props
+                        return <img 
+                            src={src}
+                            alt={alt}
+                            style={{
+                                display: 'inline-block'
+                            }}
+                        />
                     }
                 })}
                 skipHtml
