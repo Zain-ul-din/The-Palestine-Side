@@ -9,6 +9,7 @@ export default function Page ({ martyrs }: { martyrs: Array<Martyr> }) {
         <Head 
             title="Martyrs"
             description="Know their Name.The list of people killed in Gaza during one month. Palestinian Martyrs."
+            socialCardLink="https://github.com/Zain-ul-din/Zain-ul-din/assets/78583049/e957dae7-ecdb-4425-a8db-0449a398a9c6"
         />
         <main>
             <Martyrs 
