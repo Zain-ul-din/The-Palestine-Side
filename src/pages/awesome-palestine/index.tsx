@@ -10,6 +10,7 @@ export default function Page ({ content } : { content: string}) {
         <Head 
             title="Awesome Palestine"
             description="A curated list of Palestine and Palestinian-Israeli conflict resources."
+            socialCardLink="https://github.com/Zain-ul-din/Zain-ul-din/assets/78583049/c7b2f1c8-2ece-4474-9c67-d4b5a3cd8930"
         />
         <main>
             <ContentLayout p={2}>
