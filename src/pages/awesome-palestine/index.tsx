@@ -36,7 +36,8 @@ export async function getStaticProps(context: GetStaticPropsContext)
     
     return {
         props: {
-            content
+            content,
+            revalidate: 10
         }
     }
 }
