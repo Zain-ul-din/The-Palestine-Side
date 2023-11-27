@@ -36,8 +36,15 @@ export default function Footer ()
         <Flex justifyContent={'space-evenly'} flexWrap={'wrap'} my={3} gap={5} mx={3}>
             {Object.entries(ROUTES).map(([k,v], i)=>{
                 if([ROUTES.Content].includes(v)) return;
-                return <Link href={v} key={i}>
-                    <Text textDecoration={'underline'} fontFamily={'serif'} fontSize={isSmScreen? 'sm' : 'initial'}>{k}</Text>
+                return <Link href={v} key={i} onClick={()=> {
+                    window.document.body.scrollTo(0,0);
+                }}>
+                    <Text textDecoration={'underline'} 
+                        fontFamily={'serif'} 
+                        fontSize={isSmScreen? 'sm' : 'initial'}
+                    >
+                        {k}
+                    </Text>
                 </Link>
             })}
         </Flex>
