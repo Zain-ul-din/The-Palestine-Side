@@ -4,6 +4,7 @@ import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import { Flex, Heading, List, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import { generateHeadingId } from "@/lib/markdown-util";
+import rehypeRaw from  "rehype-raw";
 
 interface MarkDownConfig {
     linkRedirect?: '_blank' | '_self',
@@ -83,7 +84,7 @@ export default function MarkDownContent (
                         />
                     }
                 })}
-                skipHtml
+                rehypePlugins={[rehypeRaw]}
             >
                 {children}
             </Markdown>
