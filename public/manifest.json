@@ -1,0 +1,75 @@
+{
+    "theme_color": "#333333",
+    "background_color": "#333333",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "The Palestine Side",
+    "short_name": "Palestine Side",
+    "description": "The Palestine side of Palestine Israeli conflict",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/masks/maskable_icon_x256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/masks/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/masks/maskable_icon_x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/masks/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/SS_1.png",
+            "sizes": "1600x808",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Wonder Widgets"
+        },
+        {
+            "src": "/screenshots/SS_2.png",
+            "sizes": "1603x824",
+            "type": "image/png"
+        },
+        {
+            "src": "/screenshots/SS_3.png",
+            "sizes": "1600x808",
+            "type": "image/png"
+        }
+    ]
+}

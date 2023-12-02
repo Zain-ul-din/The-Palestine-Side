@@ -17,14 +17,18 @@ export default function Head (
     { title, description, socialCardLink }: HeadProps
 ) {
     return <NextHead>
-        <title>{title || defaultProps.title}</title>
-        <meta name="description" content={description || defaultProps.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+      <title>{title || defaultProps.title}</title>
+      <meta name="description" content={description || defaultProps.description} />
+      <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width" />
+      <link rel="icon" href="/favicon.ico" />
 
-        {/* social */}
-        
-        {/* Facebook Meta Tags */}
+      {/* PWA */}
+
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* social */}
+      
+      {/* Facebook Meta Tags */}
       <meta property="og:url" content="https://www.palestineside.site/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title || defaultProps.title} />
