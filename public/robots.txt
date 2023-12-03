@@ -1,11 +1,9 @@
-//robots.txt
-
-# Block all crawlers for /accounts
-User-agent: *
-Disallow: /accounts
-
-# Allow all crawlers
+# *
 User-agent: *
 Allow: /
 
-# source: https://nextjs.org/learn-pages-router/seo/crawling-and-indexing/robots-txt
+# Host
+Host: https://www.palestineside.site/
+
+# Sitemaps
+Sitemap: https://www.palestineside.site/sitemap.xml
