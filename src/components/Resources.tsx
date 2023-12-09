@@ -11,7 +11,6 @@ export default function Resources ({ content } : { content: ResourceContent })
     const [input, setInput] = useState<string>("")
     const { colorMode } = useColorMode()
     useResolveSelfTargets();
-    console.log("hello there");
     
     return <ContentLayout p={isSmallScreen ? 2 : 2}>
         <Flex width={'100%'} flexDir={'column'} gap={8}
