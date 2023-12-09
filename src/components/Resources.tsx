@@ -1,4 +1,5 @@
 import ContentLayout from "@/Layout/ContentLayout";
+import useResolveSelfTargets from "@/hooks/useResolveSelfTargets";
 import ResourceContent from "@/types/ResourcesContent";
 import { Divider, Flex, Heading, Input, Text, useColorMode, useMediaQuery } from "@chakra-ui/react";
 import Link from "next/link";
@@ -9,6 +10,8 @@ export default function Resources ({ content } : { content: ResourceContent })
     const [isSmallScreen] = useMediaQuery("(max-width: 500px)")
     const [input, setInput] = useState<string>("")
     const { colorMode } = useColorMode()
+    useResolveSelfTargets();
+    console.log("hello there");
     
     return <ContentLayout p={isSmallScreen ? 2 : 2}>
         <Flex width={'100%'} flexDir={'column'} gap={8}

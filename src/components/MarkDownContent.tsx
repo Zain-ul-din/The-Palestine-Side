@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Markdown from "react-markdown";
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
-import { Flex, Heading, List, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
+import { Flex, Heading, ListItem, OrderedList, Text, UnorderedList, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import { generateHeadingId } from "@/lib/markdown-util";
 import rehypeRaw from  "rehype-raw";
+import useResolveSelfTargets from "@/hooks/useResolveSelfTargets";
 
 interface MarkDownConfig {
     linkRedirect?: '_blank' | '_self',
@@ -17,7 +18,8 @@ export default function MarkDownContent (
 ) 
 {
     const { colorMode } = useColorMode()
-
+    useResolveSelfTargets()
+    
     return <>
         <Flex 
             p={4} flexDir={'column'} 
@@ -43,8 +45,9 @@ export default function MarkDownContent (
                     a: props => {
                         const { children } = props
                         return  <Link href={props.href as string} style={{
-                            textDecoration: 'underline'
-                        }} target={markDownConfig?.linkRedirect || "_blank"}>
+                                textDecoration: 'underline'
+                            }} target={markDownConfig?.linkRedirect || "_blank"}
+                        >
                             {children}
                         </Link>
                     },
