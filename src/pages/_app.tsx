@@ -4,8 +4,11 @@ import { CSSReset, ChakraProvider } from '@chakra-ui/react';
 import theme from '@/styles/theme';
 import MainLayout from '@/Layout/MainLayout';
 import { motion } from 'framer-motion';
+import useOnRouterChange from '@/hooks/useOnRouterChange';
 
 export default function App({ Component, pageProps }: AppProps) {
+    
+    useOnRouterChange(()=> window.document.body.scrollTo(0,0));
     
     return (
         <ChakraProvider theme={theme}>
