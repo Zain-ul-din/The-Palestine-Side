@@ -5,6 +5,7 @@ import theme from '@/styles/theme';
 import MainLayout from '@/Layout/MainLayout';
 import { motion } from 'framer-motion';
 import useOnRouterChange from '@/hooks/useOnRouterChange';
+import ProgressBar from '@/components/ProgressBar';
 
 export default function App({ Component, pageProps }: AppProps) {
     
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     
     return (
         <ChakraProvider theme={theme}>
+            <ProgressBar />
             {/* Prevent FOUC (Flash of Unstyled Content)  */}
             <motion.div
                 initial={{ opacity: 0 }}
