@@ -24,8 +24,10 @@ export default function Footer ()
 
             <IconText icon={<AiOutlineShareAlt/>} onClick={()=> {
                 navigator.share({
-                    /** TODO: add share meta */
                     title: 'The Palestine Side',
+                    text: `We built a website that explains part of the Palestine side in English (because there's just a lot of misinformation from the Israeli side and Western media):
+                        https://www.palestineside.site/
+                    It would be amazing if you could share it to increase awareness of what actually happens  ♥.`,
                     url: window.location.href
                 })
             }}>
