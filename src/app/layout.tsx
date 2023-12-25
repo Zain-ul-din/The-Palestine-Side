@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 
+// components
+import Header from '@/components/Header'
+import clsx from 'clsx'
+import { ReactNode } from 'react'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,7 +21,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <main className={clsx('flex w-full')}>
+          <div
+            className={clsx('p-2 w-full max-w-[1420px] mx-auto', 'flex-col')}>
+            <MarkDownLayout>{children}</MarkDownLayout>
+          </div>
+        </main>
+      </body>
     </html>
+  )
+}
+
+const MarkDownLayout = ({ children }: { children: ReactNode }) => {
+  return (
+    <div className={clsx('p-4 flex flex-col bg-slate-200 rounded-md')}>
+      {children}
+    </div>
   )
 }
