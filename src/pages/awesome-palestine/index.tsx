@@ -28,6 +28,7 @@ export default function Page ({ content } : { content: string}) {
     </>
 }
 
+
 export async function getStaticProps(context: GetStaticPropsContext)
 {
     const content = await (await 
